@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Navbar(props) {
-    const { title = 'Set title here', aboutText = 'About' } = props;
+    const { title = 'Set title here' } = props;
     return (
         <nav
             className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
         >
             <div className='container-fluid'>
-                <a className='navbar-brand' href='#'>
+                <a className='navbar-brand' href='/'>
                     {title}
                 </a>
                 <button
@@ -29,9 +29,9 @@ export default function Navbar(props) {
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                         <li className='nav-item'>
                             <a
-                                className='nav-link active'
+                                className='nav-link'
                                 aria-current='page'
-                                href='#'
+                                href='/'
                             >
                                 Home
                             </a>
@@ -66,8 +66,3 @@ Navbar.propTypes = {
     title: PropTypes.string.isRequired,
     aboutText: PropTypes.string,
 };
-
-// Navbar.defaultProps = {
-//     title: 'Set title here',
-//     aboutText: 'About Text here',
-// };

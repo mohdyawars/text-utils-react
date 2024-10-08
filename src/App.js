@@ -1,7 +1,5 @@
 import { useState } from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
@@ -34,14 +32,12 @@ function App() {
 
     return (
         <>
-            {' '}
-            {/* This is now correctly using BrowserRouter */}
             <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
             <Alert alert={alert} />
             <div className='container my-3'>
                 <TextForm
                     showAlert={showAlert}
-                    heading='Enter the text to analyze below'
+                    heading='TextUtils - Word Counter, Character Counter, Remove Extra Spaces'
                     mode={mode}
                 />
             </div>
